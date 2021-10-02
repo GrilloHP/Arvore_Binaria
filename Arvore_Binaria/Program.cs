@@ -10,18 +10,18 @@ namespace Arvore_Binaria
         {
             ArvoreBinaria arvore = new ArvoreBinaria();
 
-            Console.WriteLine("Inserindo valores na Árvore Binária: ");
-
             arvore.Inserir(65);
             arvore.Inserir(13);
             arvore.Inserir(84);
-            arvore.Inserir(42);
             arvore.Inserir(69);
-            arvore.Inserir(91);
-            arvore.Inserir(24);
-            arvore.Inserir(96);
+            arvore.Inserir(42);
             arvore.Inserir(1);
+            arvore.Inserir(24);
+            arvore.Inserir(91);
             arvore.Inserir(73);
+            arvore.Inserir(96);
+
+            Console.WriteLine("Valores inseridos na Árvore Binária");
 
             //for (var i = 0; i < 10; i++)
             //{
@@ -29,8 +29,13 @@ namespace Arvore_Binaria
             //    arvore.Inserir(val);
             //}
 
-            string retornaBusca = arvore.Buscar(42) ? "Valor encontrado!": "Não existe esse valor na árvore!";
-            Console.WriteLine(retornaBusca);
+            //string retornaBusca = arvore.Buscar(42) ? "Valor encontrado!": "Não existe esse valor na árvore!";
+            //Console.WriteLine(retornaBusca);
+
+            //Console.WriteLine($"Nível: {arvore.Nivel()}");
+            //Console.WriteLine($"Altura: {arvore.Altura()}");
+
+            Console.WriteLine(arvore.PreOrdem()); 
 
             //arvore.Remover(24); // Nó Folha
             //arvore.Remover(42); // Possui Filho Esquerdo

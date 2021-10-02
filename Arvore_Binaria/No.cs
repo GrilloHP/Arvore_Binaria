@@ -13,6 +13,7 @@ namespace Arvore_Binaria
 
         public No NoDireito { get; set; }
         #endregion
+
         #region Contrutores
 
         /// <summary>
@@ -24,6 +25,7 @@ namespace Arvore_Binaria
             Valor = valor;
         }
         #endregion
+
         #region Inserir um novo nó
 
         /// <summary>
@@ -46,7 +48,8 @@ namespace Arvore_Binaria
             }
         }
         #endregion
-        #region Buscar um nò
+
+        #region Buscar um nó
 
         /// <summary>
         /// Busca um valor entre os nós.
@@ -54,24 +57,6 @@ namespace Arvore_Binaria
         /// <param name="valor">Representa o valor a ser buscado no nó.</param>
         /// <returns></returns>
         public bool Buscar(int valor)
-        {
-            No noAtual = this;
-
-            while (noAtual != null)
-            {
-                if (valor == noAtual.Valor)
-                {
-                    return true;
-                }
-                else if (valor > noAtual.Valor)
-                    noAtual = noAtual.NoDireito;
-                else
-                    noAtual = noAtual.NoEsquerdo;
-            }
-            return false;
-        }
-
-        public bool BuscarRecursivo(int valor)
         {
             if (valor == Valor)
                 return true;
@@ -81,6 +66,66 @@ namespace Arvore_Binaria
                 return NoDireito.Buscar(valor);
             else
                 return false;
+        }
+        #endregion
+
+        // Falta Documentar
+        #region Altura
+        public int Altura()
+        {
+            if (this.NoEsquerdo == null && this.NoDireito == null)
+                return 1;
+
+            int esquerda = 0;
+            int direita = 0;
+
+            if (this.NoEsquerdo != null)
+                esquerda = this.NoEsquerdo.Altura();
+            if (this.NoDireito != null)
+                direita = this.NoDireito.Altura();
+
+            if (esquerda > direita)
+                return esquerda + 1;
+            else
+                return direita + 1;
+        }
+        #endregion
+
+        // Falta Documentar
+        #region Nível
+        public int Nivel()
+        {
+            if (this.NoEsquerdo == null && this.NoDireito == null)
+                return 0;
+
+            int esquerda = -1;
+            int direita = -1;
+
+            if (this.NoEsquerdo != null)
+                esquerda = this.NoEsquerdo.Nivel();
+            if (this.NoDireito != null)
+                direita = this.NoDireito.Nivel();
+
+            if (esquerda > direita)
+                return esquerda + 1;
+            else
+                return direita + 1;
+        }
+        #endregion
+
+        // Falta Documentar
+        #region Pre Ordem
+        public void PreOrdem()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append($"{Valor} ");
+
+            if (NoEsquerdo != null)
+                NoEsquerdo.PreOrdem();
+            if (NoDireito != null)
+                NoDireito.PreOrdem();
+
+            return sb;
         }
         #endregion
     }

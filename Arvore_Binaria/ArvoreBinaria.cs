@@ -9,6 +9,7 @@ namespace Arvore_Binaria
         #region Atirbutos
         public No Raiz { get; set; }
         #endregion
+
         #region Inserir
 
         /// <summary>
@@ -23,6 +24,7 @@ namespace Arvore_Binaria
                 Raiz = new No(valor);
         }
         #endregion
+
         #region Buscar
 
         /// <summary>
@@ -38,15 +40,7 @@ namespace Arvore_Binaria
                 return false;
         }
         #endregion
-        #region Buscar por recursividade
-        public bool BuscarRecursivo(int valor)
-        {
-            if (Raiz != null)
-                return Raiz.BuscarRecursivo(valor);
-            else
-                return false;
-        }
-        #endregion
+
         #region Remover
 
         /// <summary>
@@ -82,7 +76,7 @@ namespace Arvore_Binaria
             if (atual == null)
                 return false;
 
-            //Nó Folha
+
             if (atual.NoDireito == null && atual.NoEsquerdo == null)
                 if (atual == Raiz)
                     Raiz = null;
@@ -155,6 +149,37 @@ namespace Arvore_Binaria
 
 
             return sucessor;
+        }
+        #endregion
+
+        // Falta Documentar
+        #region Altura
+        public int Altura()
+        {
+            if (Raiz == null)
+                return 0;
+            return Raiz.Altura();
+        }
+        #endregion 
+
+        // Falta Documentar
+        #region Nível
+        public int Nivel()
+        {
+            if (Raiz == null)
+                return 0;
+            return Raiz.Nivel();
+        }
+        #endregion 
+
+        // Falta Documentar
+        #region Pre Ordem
+        public StringBuilder PreOrdem()
+        {
+            if (Raiz != null)
+                return Raiz.PreOrdem();
+
+            return null;
         }
         #endregion
     }
