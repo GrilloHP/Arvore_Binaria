@@ -9,6 +9,7 @@ namespace Arvore_Binaria
         #region Atirbutos
         public No Raiz { get; set; }
         #endregion
+
         #region Inserir
 
         /// <summary>
@@ -23,6 +24,7 @@ namespace Arvore_Binaria
                 Raiz = new No(valor);
         }
         #endregion
+
         #region Buscar
 
         /// <summary>
@@ -38,15 +40,17 @@ namespace Arvore_Binaria
                 return false;
         }
         #endregion
+
         #region Buscar por recursividade
         public bool BuscarRecursivo(int valor)
         {
             if (Raiz != null)
-                return Raiz.BuscarRecursivo(valor);
+                return Raiz.Buscar(valor);
             else
                 return false;
         }
         #endregion
+
         #region Remover
 
         /// <summary>
@@ -81,9 +85,9 @@ namespace Arvore_Binaria
 
             if (atual == null)
                 return false;
-
-            //Nó Folha
+            
             if (atual.NoDireito == null && atual.NoEsquerdo == null)
+            {
                 if (atual == Raiz)
                     Raiz = null;
                 else
@@ -93,7 +97,12 @@ namespace Arvore_Binaria
                     else
                         pai.NoDireito = null;
                 }
+                return true;
+            }
+                
+                
             else if (atual.NoDireito == null)
+            {
                 if (atual == Raiz)
                     Raiz = atual.NoEsquerdo;
                 else
@@ -103,7 +112,11 @@ namespace Arvore_Binaria
                     else
                         pai.NoDireito = atual.NoEsquerdo;
                 }
+                return true;
+            }
+               
             else if (atual.NoEsquerdo == null)
+            {
                 if (atual == Raiz)
                     Raiz = atual.NoDireito;
                 else
@@ -113,6 +126,9 @@ namespace Arvore_Binaria
                     else
                         pai.NoDireito = atual.NoDireito;
                 }
+                return true;
+            }
+                
             else
             {
                 No sucessor = EncontrarSucessor(atual);
@@ -123,8 +139,8 @@ namespace Arvore_Binaria
                     pai.NoEsquerdo = sucessor;
                 else
                     pai.NoDireito = sucessor;
+                return true;
             }
-            return false;
         }
 
 

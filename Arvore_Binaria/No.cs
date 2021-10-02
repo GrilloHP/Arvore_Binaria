@@ -13,6 +13,7 @@ namespace Arvore_Binaria
 
         public No NoDireito { get; set; }
         #endregion
+
         #region Contrutores
 
         /// <summary>
@@ -24,6 +25,7 @@ namespace Arvore_Binaria
             Valor = valor;
         }
         #endregion
+
         #region Inserir um novo nó
 
         /// <summary>
@@ -46,6 +48,7 @@ namespace Arvore_Binaria
             }
         }
         #endregion
+
         #region Buscar um nò
 
         /// <summary>
@@ -54,24 +57,6 @@ namespace Arvore_Binaria
         /// <param name="valor">Representa o valor a ser buscado no nó.</param>
         /// <returns></returns>
         public bool Buscar(int valor)
-        {
-            No noAtual = this;
-
-            while (noAtual != null)
-            {
-                if (valor == noAtual.Valor)
-                {
-                    return true;
-                }
-                else if (valor > noAtual.Valor)
-                    noAtual = noAtual.NoDireito;
-                else
-                    noAtual = noAtual.NoEsquerdo;
-            }
-            return false;
-        }
-
-        public bool BuscarRecursivo(int valor)
         {
             if (valor == Valor)
                 return true;
