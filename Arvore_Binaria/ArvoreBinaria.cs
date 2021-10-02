@@ -125,7 +125,6 @@ namespace Arvore_Binaria
             }
             sucessor.NoEsquerdo = no.NoEsquerdo;
 
-
             return sucessor;
         }
 
