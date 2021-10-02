@@ -35,6 +35,8 @@ namespace Arvore_Binaria
                 Menu();
             }
         }
+
+        #region Inserir
         static void Inserir()
         {
             Console.WriteLine("Qual o valor que deseja incluir?");
@@ -75,6 +77,9 @@ namespace Arvore_Binaria
             //    arvore.Inserir(val);
             //}
         }
+        #endregion
+
+        #region Consultar
         static void Consultar()
         {
             Console.WriteLine("Qual o valor procurado?");
@@ -99,6 +104,9 @@ namespace Arvore_Binaria
             }
 
         }
+        #endregion
+
+        #region Remover
         static void Remover()
         {
             Console.WriteLine("Qual o valor que deseja remover?");
@@ -127,5 +135,6 @@ namespace Arvore_Binaria
             //arvore.Remover(69); // possui filho direito
             //arvore.Remover(65); // Possui Filho Direito e Esquerdo
         }
+        #endregion
     }
 }
