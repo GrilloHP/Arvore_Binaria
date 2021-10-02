@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31402.337
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arvore_Binaria", "Arvore_Binaria\Arvore_Binaria.csproj", "{6991982C-261F-4A4B-8F87-E4EB7F939B8F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6991982C-261F-4A4B-8F87-E4EB7F939B8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6991982C-261F-4A4B-8F87-E4EB7F939B8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6991982C-261F-4A4B-8F87-E4EB7F939B8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6991982C-261F-4A4B-8F87-E4EB7F939B8F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {211AEEA5-D9CF-439A-AF09-C9940091B502}
+	EndGlobalSection
+EndGlobal
