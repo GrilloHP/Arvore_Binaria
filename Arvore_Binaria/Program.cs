@@ -29,16 +29,13 @@ namespace Arvore_Binaria
             //    arvore.Inserir(val);
             //}
 
-            //string retornaBusca = arvore.Buscar(42) ? "Valor encontrado!": "Não existe esse valor na árvore!";
-            //Console.WriteLine(retornoBusca);
-
-            //string retornaBuscaRecursiva = arvore.BuscarRecursivo(42) ? "Valor encontrado!" : "Não existe esse valor na árvore!";
-            //Console.WriteLine(retornaBuscaRecursiva);
+            string retornaBusca = arvore.Buscar(42) ? "Valor encontrado!" : "Não existe esse valor na árvore!";
+            Console.WriteLine(retornaBusca);
 
             //arvore.Remover(24); // Nó Folha
             //arvore.Remover(42); // Possui Filho Esquerdo
-            arvore.Remover(69); // Possui Filho Direito
-            arvore.Remover(65); // Possui Filho Direito e Esquerdo
+            //arvore.Remover(69); // Possui Filho Direito
+            //arvore.Remover(65); // Possui Filho Direito e Esquerdo
         }
     }
 }
