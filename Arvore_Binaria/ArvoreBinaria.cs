@@ -6,8 +6,10 @@ namespace Arvore_Binaria
 {
     class ArvoreBinaria
     {
+        #region Atirbutos
         public No Raiz { get; set; }
-
+        #endregion
+        #region Inserir
         public void Inserir(int valor)
         {
             if (Raiz != null)
@@ -15,7 +17,8 @@ namespace Arvore_Binaria
             else
                 Raiz = new No(valor);
         }
-
+        #endregion
+        #region Buscar
         public bool Buscar(int valor)
         {
             if (Raiz != null)
@@ -23,7 +26,8 @@ namespace Arvore_Binaria
             else
                 return false;
         }
-
+        #endregion
+        #region Buscar por recursividade
         public bool BuscarRecursivo(int valor)
         {
             if (Raiz != null)
@@ -31,7 +35,8 @@ namespace Arvore_Binaria
             else
                 return false;
         }
-
+        #endregion
+        #region Remover
         public bool Remover(int valor)
         {
             No atual = Raiz;
@@ -128,6 +133,6 @@ namespace Arvore_Binaria
 
             return sucessor;
         }
-
+        #endregion
     }
 }

@@ -6,17 +6,20 @@ namespace Arvore_Binaria
 {
     class No
     {
+        #region Atributos
         public int Valor { get; }
 
         public No NoEsquerdo { get; set; }
 
         public No NoDireito { get; set; }
-
+        #endregion
+        #region Contrutores
         public No(int valor)
         {
             Valor = valor;
         }
-
+        #endregion
+        #region Inserir um novo nó
         public void Inserir(int valor)
         {
             if (valor >= Valor)
@@ -32,7 +35,8 @@ namespace Arvore_Binaria
                     NoEsquerdo.Inserir(valor);
             }
         }
-
+        #endregion
+        #region Buscar um nò
         public bool Buscar(int valor)
         {
             No noAtual = this;
@@ -50,7 +54,8 @@ namespace Arvore_Binaria
             }
             return false;
         }
-
+        #endregion
+        #region Buscar um nó Por recursividade
         public bool BuscarRecursivo(int valor)
         {
             if (valor == Valor)
@@ -62,5 +67,6 @@ namespace Arvore_Binaria
             else
                 return false;
         }
+        #endregion
     }
 }

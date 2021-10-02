@@ -29,8 +29,8 @@ namespace Arvore_Binaria
             //    arvore.Inserir(val);
             //}
 
-            //string retornaBusca = arvore.Buscar(42) ? "Valor encontrado!": "Não existe esse valor na árvore!";
-            //Console.WriteLine(retornoBusca);
+            string retornaBusca = arvore.Buscar(42) ? "Valor encontrado!": "Não existe esse valor na árvore!";
+            Console.WriteLine(retornaBusca);
 
             //string retornaBuscaRecursiva = arvore.BuscarRecursivo(42) ? "Valor encontrado!" : "Não existe esse valor na árvore!";
             //Console.WriteLine(retornaBuscaRecursiva);
