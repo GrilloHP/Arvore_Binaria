@@ -190,7 +190,7 @@ namespace Arvore_Binaria
         }
         #endregion 
 
-        #region Pre Ordem
+        #region Pré Ordem
         /// <summary>
         /// Determina o percurso de varredura pré-ordem da árvore.
         /// </summary>
