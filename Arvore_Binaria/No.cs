@@ -76,16 +76,16 @@ namespace Arvore_Binaria
         /// <returns>Retorna um inteiro com o valor da altura da árvore.</returns>
         public int Altura()
         {
-            if (this.NoEsquerdo == null && this.NoDireito == null)
+            if (NoEsquerdo == null && NoDireito == null)
                 return 1;
 
             int esquerda = 0;
             int direita = 0;
 
-            if (this.NoEsquerdo != null)
-                esquerda = this.NoEsquerdo.Altura();
-            if (this.NoDireito != null)
-                direita = this.NoDireito.Altura();
+            if (NoEsquerdo != null)
+                esquerda = NoEsquerdo.Altura();
+            if (NoDireito != null)
+                direita = NoDireito.Altura();
 
             if (esquerda > direita)
                 return esquerda + 1;
@@ -101,16 +101,16 @@ namespace Arvore_Binaria
         /// <returns>Retorna um inteiro com o valor do nível da árvore.</returns>
         public int Nivel()
         {
-            if (this.NoEsquerdo == null && this.NoDireito == null)
+            if (NoEsquerdo == null && NoDireito == null)
                 return 0;
 
             int esquerda = -1;
             int direita = -1;
 
-            if (this.NoEsquerdo != null)
-                esquerda = this.NoEsquerdo.Nivel();
-            if (this.NoDireito != null)
-                direita = this.NoDireito.Nivel();
+            if (NoEsquerdo != null)
+                esquerda = NoEsquerdo.Nivel();
+            if (NoDireito != null)
+                direita = NoDireito.Nivel();
 
             if (esquerda > direita)
                 return esquerda + 1;
@@ -118,19 +118,19 @@ namespace Arvore_Binaria
                 return direita + 1;
         }
         #endregion
-        
+
         #region Pré Ordem
         /// <summary>
         /// Determina o percurso de varredura pré-ordem da árvore.
         /// </summary>
         public void PreOrdem()
         {
-           Console.Write($"{Valor} ");
-
+            Console.Write($"{Valor} "); 
+            
             if (NoEsquerdo != null)
                 NoEsquerdo.PreOrdem();
             if (NoDireito != null)
-                NoDireito.PreOrdem();            
+                NoDireito.PreOrdem();
         }
         #endregion
 
