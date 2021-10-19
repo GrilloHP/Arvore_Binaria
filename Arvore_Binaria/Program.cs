@@ -31,8 +31,8 @@ namespace Arvore_Binaria
                 //string retornaBusca = arvore.Buscar(42) ? "Valor encontrado!" : "Não existe esse valor na árvore!";
                 //Console.WriteLine(retornaBusca);
 
-                Console.WriteLine($"Nível: {arvore.Nivel()}");
-                Console.WriteLine($"Altura: {arvore.Altura()}");
+                //Console.WriteLine($"Nível: {arvore.Nivel()}");
+                //Console.WriteLine($"Altura: {arvore.Altura()}");
 
                 //Console.Write("Pré-Ordem: ");
                 //arvore.PreOrdem();
@@ -43,13 +43,14 @@ namespace Arvore_Binaria
                 //Console.Write("\n\nPós-Ordem: ");
                 //arvore.PosOrdem();
 
-                Console.WriteLine(arvore.Buscar(24) ? "Valor encontrado!" : "Não existe esse valor na árvore!");
-                arvore.Remover(24); // Nó Folha
-                Console.WriteLine(arvore.Buscar(24) ? "Valor encontrado!" : "Não existe esse valor na árvore!");
+                //Console.WriteLine(arvore.Buscar(24) ? "Valor encontrado!" : "Não existe esse valor na árvore!");
+                string retornaRemover = arvore.Remover(1) ? "Valor removido com sucesso!" : "Valor não encontrado"; // Nó Folha
+                Console.WriteLine(retornaRemover);
+                //Console.WriteLine(arvore.Buscar(24) ? "Valor encontrado!" : "Não existe esse valor na árvore!");
 
-                arvore.Remover(42); // Possui Filho Esquerdo
-                arvore.Remover(69); // Possui Filho Direito
-                arvore.Remover(65); // Possui Filho Direito e Esquerdo
+                //arvore.Remover(42); // Possui Filho Esquerdo
+                //arvore.Remover(69); // Possui Filho Direito
+                //arvore.Remover(65); // Possui Filho Direito e Esquerdo
             }
         }
     }

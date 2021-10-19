@@ -76,9 +76,9 @@ namespace Arvore_Binaria
             if (atual == null)
                 return false;
 
-
             if (atual.NoDireito == null && atual.NoEsquerdo == null)
-                if (atual == Raiz)
+            {
+                if (atual == Raiz) 
                     Raiz = null;
                 else
                 {
@@ -87,7 +87,12 @@ namespace Arvore_Binaria
                     else
                         pai.NoDireito = null;
                 }
+                return true;
+            }
+
+
             else if (atual.NoDireito == null)
+            {
                 if (atual == Raiz)
                     Raiz = atual.NoEsquerdo;
                 else
@@ -97,7 +102,11 @@ namespace Arvore_Binaria
                     else
                         pai.NoDireito = atual.NoEsquerdo;
                 }
+                return true;
+            }
+
             else if (atual.NoEsquerdo == null)
+            {
                 if (atual == Raiz)
                     Raiz = atual.NoDireito;
                 else
@@ -107,6 +116,9 @@ namespace Arvore_Binaria
                     else
                         pai.NoDireito = atual.NoDireito;
                 }
+                return true;
+            }
+
             else
             {
                 No sucessor = EncontrarSucessor(atual);
@@ -117,8 +129,8 @@ namespace Arvore_Binaria
                     pai.NoEsquerdo = sucessor;
                 else
                     pai.NoDireito = sucessor;
+                return true;
             }
-            return false;
         }
 
 
