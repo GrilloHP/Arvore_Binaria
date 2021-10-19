@@ -185,7 +185,7 @@ namespace Arvore_Binaria
         public int Nivel()
         {
             if (Raiz == null)
-                return 0;
+                return -1;
             return Raiz.Nivel();
         }
         #endregion 
