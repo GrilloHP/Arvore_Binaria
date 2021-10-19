@@ -24,23 +24,33 @@ namespace Arvore_Binaria
             Console.WriteLine("Valores inseridos na Árvore Binária");
 
             //for (var i = 0; i < 10; i++)
-            //{
-            //    var val = rnd.Next(1, 999);
-            //    arvore.Inserir(val);
-            //}
+            {            //    var val = rnd.Next(1, 999);
+                         //    arvore.Inserir(val);
+                         //}
 
-            //string retornaBusca = arvore.Buscar(42) ? "Valor encontrado!": "Não existe esse valor na árvore!";
-            //Console.WriteLine(retornaBusca);
+                //string retornaBusca = arvore.Buscar(42) ? "Valor encontrado!" : "Não existe esse valor na árvore!";
+                //Console.WriteLine(retornaBusca);
 
-            //Console.WriteLine($"Nível: {arvore.Nivel()}");
-            //Console.WriteLine($"Altura: {arvore.Altura()}");
+                Console.WriteLine($"Nível: {arvore.Nivel()}");
+                Console.WriteLine($"Altura: {arvore.Altura()}");
 
-            Console.WriteLine(arvore.PreOrdem()); 
+                //Console.Write("Pré-Ordem: ");
+                //arvore.PreOrdem();
 
-            //arvore.Remover(24); // Nó Folha
-            //arvore.Remover(42); // Possui Filho Esquerdo
-            //arvore.Remover(69); // Possui Filho Direito
-            //arvore.Remover(65); // Possui Filho Direito e Esquerdo
+                //Console.Write("\n\nIn-Ordem: ");
+                //arvore.InOrdem();
+
+                //Console.Write("\n\nPós-Ordem: ");
+                //arvore.PosOrdem();
+
+                Console.WriteLine(arvore.Buscar(24) ? "Valor encontrado!" : "Não existe esse valor na árvore!");
+                arvore.Remover(24); // Nó Folha
+                Console.WriteLine(arvore.Buscar(24) ? "Valor encontrado!" : "Não existe esse valor na árvore!");
+
+                arvore.Remover(42); // Possui Filho Esquerdo
+                arvore.Remover(69); // Possui Filho Direito
+                arvore.Remover(65); // Possui Filho Direito e Esquerdo
+            }
         }
     }
 }

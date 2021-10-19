@@ -6,7 +6,7 @@ namespace Arvore_Binaria
 {
     class ArvoreBinaria
     {
-        #region Atirbutos
+        #region Atributos
         public No Raiz { get; set; }
         #endregion
 
@@ -152,8 +152,11 @@ namespace Arvore_Binaria
         }
         #endregion
 
-        // Falta Documentar
         #region Altura
+        /// <summary>
+        /// Determina a altura da árvore
+        /// </summary>
+        /// <returns>Retorna um inteiro com o valor da altura da árvore.</returns>
         public int Altura()
         {
             if (Raiz == null)
@@ -162,8 +165,11 @@ namespace Arvore_Binaria
         }
         #endregion 
 
-        // Falta Documentar
         #region Nível
+        /// <summary>
+        /// Determina o nível da árvore
+        /// </summary>
+        /// <returns>Retorna um inteiro com o valor de nível da árvore.</returns>
         public int Nivel()
         {
             if (Raiz == null)
@@ -172,14 +178,42 @@ namespace Arvore_Binaria
         }
         #endregion 
 
-        // Falta Documentar
         #region Pre Ordem
-        public StringBuilder PreOrdem()
+        /// <summary>
+        /// Determina o percurso de varredura pré-ordem da árvore.
+        /// </summary>
+        public void PreOrdem()
         {
             if (Raiz != null)
-                return Raiz.PreOrdem();
+                Raiz.PreOrdem();
+            else
+                Console.WriteLine("Árvore vazia!");
+        }
+        #endregion
 
-            return null;
+        #region In Ordem
+        /// <summary>
+        /// Determina o percurso de varredura in-ordem da árvore.
+        /// </summary>
+        public void InOrdem()
+        {
+            if (Raiz != null)
+                Raiz.InOrdem();
+            else
+                Console.WriteLine("Árvore vazia!");
+        }
+        #endregion
+
+        #region Pós Ordem
+        /// <summary>
+        /// Determina o percurso de varredura pós-ordem da árvore.
+        /// </summary>
+        public void PosOrdem()
+        {
+            if (Raiz != null)
+                Raiz.PosOrdem();
+            else
+                Console.WriteLine("Árvore vazia!");
         }
         #endregion
     }

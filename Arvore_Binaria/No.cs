@@ -26,7 +26,7 @@ namespace Arvore_Binaria
         }
         #endregion
 
-        #region Inserir um novo nó
+        #region Inserir um valor ao nó
 
         /// <summary>
         /// Insere um valor ao nó.
@@ -49,7 +49,7 @@ namespace Arvore_Binaria
         }
         #endregion
 
-        #region Buscar um nó
+        #region Buscar um valor
 
         /// <summary>
         /// Busca um valor entre os nós.
@@ -69,8 +69,11 @@ namespace Arvore_Binaria
         }
         #endregion
 
-        // Falta Documentar
         #region Altura
+        /// <summary>
+        /// Percorre a árvore para determinar a altura.
+        /// </summary>
+        /// <returns>Retorna um inteiro com o valor da altura da árvore.</returns>
         public int Altura()
         {
             if (this.NoEsquerdo == null && this.NoDireito == null)
@@ -91,8 +94,11 @@ namespace Arvore_Binaria
         }
         #endregion
 
-        // Falta Documentar
         #region Nível
+        /// <summary>
+        /// Percorre a árvore para determinar o nível.
+        /// </summary>
+        /// <returns>Retorna um inteiro com o valor do nível da árvore.</returns>
         public int Nivel()
         {
             if (this.NoEsquerdo == null && this.NoDireito == null)
@@ -112,20 +118,51 @@ namespace Arvore_Binaria
                 return direita + 1;
         }
         #endregion
-
-        // Falta Documentar
-        #region Pre Ordem
+        
+        #region Pré Ordem
+        /// <summary>
+        /// Determina o percurso de varredura pré-ordem da árvore.
+        /// </summary>
         public void PreOrdem()
         {
-            StringBuilder sb = new StringBuilder();
-            sb.Append($"{Valor} ");
+           Console.Write($"{Valor} ");
 
             if (NoEsquerdo != null)
                 NoEsquerdo.PreOrdem();
             if (NoDireito != null)
-                NoDireito.PreOrdem();
+                NoDireito.PreOrdem();            
+        }
+        #endregion
 
-            return sb;
+        #region In Ordem
+        /// <summary>
+        /// Determina o percurso de varredura in-ordem da árvore.
+        /// </summary>
+        public void InOrdem()
+        {
+            if (NoEsquerdo != null)
+                NoEsquerdo.InOrdem();
+
+            Console.Write($"{Valor} ");
+
+            if (NoDireito != null)
+                NoDireito.InOrdem();
+        }
+        #endregion
+
+        #region Pós Ordem
+        /// <summary>
+        /// Determina o percurso de varredura pós-ordem da árvore.
+        /// </summary>
+        public void PosOrdem()
+        {
+            if (NoEsquerdo != null)
+                NoEsquerdo.PosOrdem();
+
+            if (NoDireito != null)
+                NoDireito.PosOrdem();
+
+            Console.Write($"{Valor} ");
         }
         #endregion
     }
