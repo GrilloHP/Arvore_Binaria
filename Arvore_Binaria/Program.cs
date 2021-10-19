@@ -21,37 +21,43 @@ namespace Arvore_Binaria
             arvore.Inserir(73);
             arvore.Inserir(96);
 
+
             Console.WriteLine("Valores inseridos na Árvore Binária");
 
-            //for (var i = 0; i < 10; i++)
-            {            //    var val = rnd.Next(1, 999);
-                         //    arvore.Inserir(val);
-                         //}
+            //for (var i = 0; i < 10; i++) {
+            //    var val = rnd.Next(1, 999);
+            //    arvore.Inserir(val);
+            //}
 
-                //string retornaBusca = arvore.Buscar(42) ? "Valor encontrado!" : "Não existe esse valor na árvore!";
-                //Console.WriteLine(retornaBusca);
+            //string retornaBusca = arvore.Buscar(42) ? "Valor encontrado!" : "Não existe esse valor na árvore!";
+            //Console.WriteLine(retornaBusca);
 
-                //Console.WriteLine($"Nível: {arvore.Nivel()}");
-                //Console.WriteLine($"Altura: {arvore.Altura()}");
+            //int nivel = arvore.Nivel();
+            //string retornaNivel = nivel > -1 ? "Nível: " + nivel : "Não existe uma árvore.";
+            //Console.WriteLine(retornaNivel);
 
-                //Console.Write("Pré-Ordem: ");
-                //arvore.PreOrdem();
+            //int altura = arvore.Altura();
+            //string retornaAltura = altura > 0 ? "Altura: " + altura : "Não existe uma árvore.";
+            //Console.WriteLine(retornaAltura);
 
-                //Console.Write("\n\nIn-Ordem: ");
-                //arvore.InOrdem();
 
-                //Console.Write("\n\nPós-Ordem: ");
-                //arvore.PosOrdem();
+            //Console.Write("Pré-Ordem: ");
+            //arvore.PreOrdem();
 
-                //Console.WriteLine(arvore.Buscar(24) ? "Valor encontrado!" : "Não existe esse valor na árvore!");
-                string retornaRemover = arvore.Remover(1) ? "Valor removido com sucesso!" : "Valor não encontrado"; // Nó Folha
-                Console.WriteLine(retornaRemover);
-                //Console.WriteLine(arvore.Buscar(24) ? "Valor encontrado!" : "Não existe esse valor na árvore!");
+            //Console.Write("\n\nIn-Ordem: ");
+            //arvore.InOrdem();
 
-                //arvore.Remover(42); // Possui Filho Esquerdo
-                //arvore.Remover(69); // Possui Filho Direito
-                //arvore.Remover(65); // Possui Filho Direito e Esquerdo
-            }
+            //Console.Write("\n\nPós-Ordem: ");
+            //arvore.PosOrdem();
+
+            //Console.WriteLine(arvore.Buscar(24) ? "Valor encontrado!" : "Não existe esse valor na árvore!");
+            //string retornaRemover = arvore.Remover(13) ? "Valor removido com sucesso!" : "Valor não encontrado"; // Nó Folha
+            //Console.WriteLine(retornaRemover);
+            //Console.WriteLine(arvore.Buscar(24) ? "Valor encontrado!" : "Não existe esse valor na árvore!");
+
+            //arvore.Remover(42); // Possui Filho Esquerdo
+            //arvore.Remover(69); // Possui Filho Direito
+            //arvore.Remover(65); // Possui Filho Direito e Esquerdo
         }
     }
 }
